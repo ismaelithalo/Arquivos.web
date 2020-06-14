@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Protype</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+                <span><b>Prototype JS</b></span>
+        </div>
+        <div>
+            <nav class="lista">
+                <ul>
+                    <li>TOP</li>
+                    <li>TOP</li>
+                    <li>TOP</li>
+                    <li>TOP</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="top">
+        <div onmouseover="mudaCor()">
+            Teste
+        </div>
+        <div onclick="mudaFundo()">
+            Teste
+        </div>
+        <div onclick="voltaCor()">
+            Teste
+        </div>
+    </section>
+    <footer> Powered by Ismael Ithalo</footer>
+    <script type="text/javascript">
+    var sec = document.querySelector("section#top");
+    var fund = document.querySelector("body");
+    function mudaCor() {
+        sec.style.backgroundColor="lightblue";
+    }
+    function voltaCor () {
+        sec.style.backgroundColor="white";
+        fund.style.backgroundColor="darkcyan";
+    }
+    function mudaFundo () {
+        fund.style.backgroundColor="black";
+    }
+    </script>
+</body>
+</html>

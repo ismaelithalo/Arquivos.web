@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+<script type="text/javascript">
+function id(el) {
+  return document.getElementById(el);
+}
+function mostra(element) {
+  if (element.value) {
+    id(element.value).style.display = 'block';
+  }
+}
+function esconde_todos($element, tagName) {
+  var $elements = $element.getElementsByTagName(tagName),
+      i = $elements.length;
+  while(i--) {
+    $elements[i].style.display = 'none';
+  }
+}
+window.addEventListener('load', function() {
+  var $Masculino = id('Masculino'),
+      $Feminino = id('Feminino'),
+      $sexo  = id('sel-sexo');
+
+  //mostrando no onload da página
+  esconde_todos(id('palco'), 'select');
+  mostra($sexo);
+
+  //mostrando ao mudar o select
+  $sexo.addEventListener('change', function() {
+    esconde_todos(id('palco'), 'select');
+    mostra(this);
+  });
+});
+</script>
+</head>
+<body>
+  <select name="sel-sexo" id="sel-sexo">
+    <option value="">--</option>
+    <option value="Feminino">Feminino</option>
+    <option value="Masculino">Masculino</option>
+  </select>
+
+  <!--div id="palco">
+    <div id="Masculino">Seu sexo é Masculino!</div>
+    <div id="Feminino">Seu sexo é Feminino!</div>
+  </div-->
+  
+  <br><hr><br>
+  
+  <div id = "palco">
+  <select name="teste_select" id="Masculino">
+    <option value="">--</option>
+    <option value="10">10%</option>
+    <option value="20">20%</option>
+  </select>
+  </div>
+
+</body>
+</html>

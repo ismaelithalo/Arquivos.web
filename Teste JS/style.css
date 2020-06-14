@@ -1,0 +1,60 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
+    color: black;
+    font: normal 16pt Verdana;
+    text-align: center;
+}
+#top {
+    background-color:lightblue;
+    padding: 6px;
+    margin: 50px auto;
+    width: 600px;
+    color: black;
+    text-align: center;
+    border-radius: 10%;
+	max-height: 450px;
+}
+section div {
+    padding: 15px;
+}
+header {
+    background-color: darkcyan;
+    width: 100%;
+    height: 60px;
+    color: black;
+    display: grid;
+    grid-template-areas:
+    "logo ... lista";
+    grid-template-columns: auto 1fr auto;
+    justify-content: center;
+    align-content: center;
+}
+.logo {
+    font: normal 25pt Verdana;
+    text-align: left;
+    grid-area: logo;
+    padding: 0 30px;
+}
+footer {
+	font-style: italic;
+	text-align: center;
+	padding: 5px;
+}
+.lista {
+    display: grid;
+    justify-content: center;
+    grid-area: lista;
+}
+.lista ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+}
+li {
+    list-style: none;
+}
